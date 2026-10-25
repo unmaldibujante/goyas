@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Las Goyas / Menú Digital</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+      
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap" rel="stylesheet">
+
+    
+
+    
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        
+    body {   
+    font-family: 'Oswald', sans-serif;  }   
+        
+          .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+        
+    
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+        
+        #Menuheader{ background-color: #f8e12e; background-size: cover;  width: 100% !important; max-width: 100% !important; padding-top: 10px; padding-bottom: 10px; }
+        .logoprincipal{ width: 100%; max-width: 800px; margin: 0px auto}
+        .TituloPatillo{ width: 100%; max-width: 500px; margin: 0px auto !important; margin-bottom: 50px}
+        
+
+        
+        .precioback{background: url(img/precioback.png); background-size: 140px !important; background-repeat: no-repeat; color: white; font-weight: 700; font-size: 20px; padding: 10px; width: auto; max-width: 140px; text-align: center}
+         .amarillo{ background: #f4df43}
+        .bannertop{ width: 100%; height: auto}
+        .disclaimer{ width: auto; height: auto; padding: 10px; border: 3px solid black;background: black}
+        .disclaimer p{font-size: 24px !important; text-align: center; font-weight: 500; color: #f4df43;}
+        
+        .col-sm-6{ width: 50% !important; height: auto; max-width: 500px !important}
+        
+        iframe{ width: 100% !important; height: 530px; max-width: 520px !important}
+        
+        .btn{ width: 400px !important; height: auto; margin: 0px auto !important; margin-bottom: 30px !important; font-size: 23px}
+        
+        .burgerbox{height: 230px}
+          .burgertopbox{height: 400px}
+        #topfix{height: 790px !important}
+        
+        .tacobox{height: 360px !important}
+        
+        .papabox{height: 260px !important}
+        
+        .papabox2{height: 270px !important}
+         .frijolbox{height: 250px !important}
+           .cebollabox{height: 170px !important}
+          .bebidabox{height: 140px !important}
+        
+        main{max-width: 520px !important; overflow: hidden; margin: 0px auto !important}
+          footer{max-width: 520px !important; overflow: hidden; margin: 0px auto !important; background: white}
+        
+       body{background: url(img/BackgroundHTML.png) fixed; background-repeat: no-repeat; background-size: contain; background-color: #1f1f1f; }
+        
+                .card-title{font-size: 15px; font-weight: 700}
+        .card-text{font-size: 16px !important; font-weight: 400}
+        
+        
+        .dropdown-item{width:auto; position: relative}
+        .mapdown{width: 100%; position: relative; background: #1f1f1f; top: 5px; right: 0; left: 0;  z-index: 99999999999; text-align: center !important; padding: 20px; margin-top: 0px !important; margin-bottom: 60px !important}
+        
+        
+        
+    </style>
+
+    
+  </head>
+  <body>
+
+
+
+
+
+<main style="position: relative">
+    
+    
+    
+
+    
+    
+    
+  <section class=" text-center container" id="Menuheader">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+          
+       <img src="img/logo.jpg" class="logoprincipal">
+      </div>
+    </div>
+  </section>
+    
+   
+
+      
+    
+
+    
+    <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        
+         <div class="mapdown"> <a class="dropdown-item" href="#mapa"> <img src="img/mrcmap.png" class="img-responsive" style="max-width: 250px"></a></div>
+        
+        
+        
+    
+        
+
+        
+        
+        
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/ban01.png" class="bannertop">
+      </div>
+        
+      <div class="carousel-item">
+        <img src="img/ban02.png" class="bannertop">
+      </div>
+        
+      <div class="carousel-item">
+        <img src="img/ban03.png" class="bannertop">
+      </div>
+        
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+         
+    </div></div>
+    
+    
+    
+    
+    
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="col-sm-12 col-lg-12 mb-12"><img src="img/hamburguesas.png" class="TituloPatillo"></div>
+        <div class="col-sm-12 col-lg-12 mb-12"><img src="img/burger.png" class="TituloPatillo"></div>      
+  <div class="row" data-masonry='{"percentPosition": true }'>
+     
+<!--------------------- PLATILLO BOX --------------------------------------------> 
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card">
+          <div class="card shadow-sm amarillo burgertopbox">
+            <div class="card-body" style="margin-top: 45px">
+                <h1 class="card-title">LA TRADICIONAL</h1>
+              <p class="card-text">Carne, jamón, salami, queso amarillo, queso blanco, aguacate, lechuga, tomate, cebolla morada, pepinillos, mayonesa y mostaza.</p>
+             <div class="precioback"> $72 mxn</div>
+             </div>
+          </div>
+      </div>
+    </div>
+<!------------------------------------------------------------------------------->    
+      
+           
+      <div class="col-sm-6 col-lg-4 mb-4" >
+      <div class="card disclaimer text-center p-3 burgertopbox">
+        <figure class="mb-0 burgerbox">
+          <blockquote class="" style="margin-top: 115px">
+              <p class="card-text" style="font-size: 17px !important"> <b style="font-size: 40px">+$27</b><br>En la compra de cualquiera de nuestras hamburguesas te incluimos 1/2 orden de papas.</p>
+          </blockquote>
+         </figure>
+      </div>
+    </div>
+      
+          
+      
+      
+      <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 burgerbox">
+        <figure class="p-3 mb-0">
+           <h1 class="card-title">HAWAIANA</h1>
+              <p class="card-text">La Tradicional + Piña </p>
+             <div class="precioback"> $82 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+      
+      
+  
+
+      
+    
+
+    
+      
+      
+          
+ 
+     
+      
+       <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 burgerbox">
+        <figure class="p-3 mb-0">
+           <h1 class="card-title">LA CHAMPION</h1>
+              <p class="card-text">La Tradicional + Champiñones </p>
+             <div class="precioback"> $82 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------->   
+      
+        
+            
+       <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 burgerbox">
+        <figure class="p-3 mb-0">
+          <h1 class="card-title">SALCHIBURGER</h1>
+              <p class="card-text">La Tradicional + Salchicha asada </p>
+             <div class="precioback"> $92 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------->   
+      
+       
+
+      
+
+      
+            
+      <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 burgerbox">
+        <figure class="p-3 mb-0">
+          <h1 class="card-title">PECOBURGER</h1>
+              <p class="card-text">La Tradicional + carne asada.</p>
+             <div class="precioback"> $92 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------->  
+      
+      
+      
+      
+      
+      
+      
+          <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 burgerbox">
+        <figure class="p-3 mb-0">
+           <h1 class="card-title">DOBLE GOYA</h1>
+              <p class="card-text">La Tradicional X2 </p>
+             <div class="precioback"> $99 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------->   
+      
+      
+      
+ </div>
+ </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+          <div class="col-sm-12 col-lg-12 mb-12"><img src="img/tacos.png" class="TituloPatillo"></div>
+        <div class="col-sm-12 col-lg-12 mb-12"><img src="img/empalme.png" class="TituloPatillo"></div>      
+  <div class="row" data-masonry='{"percentPosition": true }'>
+      
+        <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 tacobox">
+        <figure class="p-3 mb-0" style="margin-top: 39px">
+           <h1 class="card-title">TOSTADA</h1>
+              <p class="card-text">Tostada con queso y carne asada. </p>
+             <div class="precioback"> $38 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+            
+      
+      <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 tacobox">
+        <figure class="p-3 mb-0" style="margin-top: 25px">
+           <h1 class="card-title">SINCRONIASADA</h1>
+              <p class="card-text">Dos tortillas tipo empalme con carne asada, jamón, salami, queso amarillo y queso blanco.
+ </p>
+             <div class="precioback"> $54 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+      
+   
+   
+      
+
+      
+       <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 tacobox">
+        <figure class="p-3 mb-0" style="margin-top: 8px">
+           <h1 class="card-title">SALCHICHA ASADA (MAÍZ)</h1>
+              <p class="card-text">Carne asada, salchicha asada, jamón, salami, queso amarillo y queso blanco en tres tortillas de maíz recién hechas.</p>
+             <div class="precioback"> $79 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------->   
+      
+      
+       <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 tacobox">
+        <figure class="p-3 mb-0" style="margin-top: 6px">
+          <h1 class="card-title">SALCHICHA ASADA (HARINA)</h1>
+              <p class="card-text">Carne asada, salchicha asada, jamón, salami, queso amarillo y queso blanco en tortilla de harina gigante.</p>
+             <div class="precioback"> $79 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------->   
+      
+        
+  <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 tacobox">
+        <figure class="p-3 mb-0" style="margin-top: 25px">
+          <h1 class="card-title">TACOS DE CARNE ASADA</h1>
+              <p class="card-text">5 tacos en tortillas de maíz recién hechas. (Queso +$10)</p>
+             <div class="precioback"> $94 mxn </div>
+        </figure>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------->   
+      
+      
+      
+      
+            
+    <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 tacobox">
+        <figure class="p-3 mb-0" style="margin-top: 25px">
+           <h1 class="card-title">BURROTE</h1>
+              <p class="card-text">Tortilla de harina con carne asada, aguacate y queso blanco. </p>
+             <div class="precioback"> $98 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------->   
+      
+      
+
+      
+      
+     
+      
+ </div>
+ </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+          <div class="col-sm-12 col-lg-12 mb-12"><img src="img/papas.png" class="TituloPatillo"></div>    
+  <div class="row" data-masonry='{"percentPosition": true }' style="margin-top: 30px">
+     
+  <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 papabox">
+        <figure class="p-3 mb-0" style="margin-top: 2px">
+          <h1 class="card-title">PAPA ESPECIAL</h1>
+              <p class="card-text">Papa con carne asada, queso blanco, queso amarillo y mantequilla.</p>
+             <div class="precioback"> $89 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+        <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 papabox">
+        <figure class="p-3 mb-0" style="margin-top: 39px">
+          <h1 class="card-title">PAPA ASADA CON BONELESS</h1>
+             <div class="precioback"> $98 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+    
+    
+    </div>
+ </div>
+  </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+         <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+          <div class="col-sm-12 col-lg-12 mb-12"><img src="img/papasfrancesa.png" class="TituloPatillo"></div>    
+  <div class="row" data-masonry='{"percentPosition": true }' style="margin-top: 30px">
+     
+ 
+          
+         <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 papabox2">
+        <figure class="p-3 mb-0" style="margin-top: 48px">
+          <h1 class="card-title">ORDEN DE PAPAS </h1>
+             <div class="precioback"> $43 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+ 
+      
+  
+      
+
+      
+              
+  <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 papabox2">
+        <figure class="p-3 mb-0" style="margin-top: 2px">
+          <h1 class="card-title">PAPAS CON QUESO</h1>
+              <p class="card-text">Papas a la francesa con queso amarillo y queso blanco.</p>
+             <div class="precioback"> $53 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+      
+           <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 papabox2">
+        <figure class="p-3 mb-0" style="margin-top: 2px">
+          <h1 class="card-title">PAPAS TOMI</h1>
+              <p class="card-text">Papas a la francesa con carne asada, queso amarillo y queso blanco.</p>
+             <div class="precioback"> $79 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+      
+
+      
+
+      
+      
+       </div>
+ </div>
+  </div>
+      
+      
+      
+      
+      
+          <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+          <div class="col-sm-12 col-lg-12 mb-12"><img src="img/frijoles.png" class="TituloPatillo">
+             <p style="text-align: center; font-size: 30px; margin-top: 10px">*Solo los fines de semana</p>
+        </div>    
+  <div class="row" data-masonry='{"percentPosition": true }'>
+ 
+      
+           
+        <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 frijolbox">
+        <figure class="p-3 mb-0" style="margin-top: 25px">
+          <h1 class="card-title">FRIJOLES SENCILLOS</h1>
+             <p class="card-text">Frijoles a la charra de 8 oz.</p>
+             <div class="precioback"> $23 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+      
+     
+  <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 frijolbox">
+        <figure class="p-3 mb-0">
+          <h1 class="card-title">FRIJOLES PREPARADOS</h1>
+              <p class="card-text">Frijoles a la charra de 12 oz. con queso blanco y carne asada.</p>
+             <div class="precioback"> $34 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+ 
+    
+    
+    </div>
+ </div>
+  </div>
+      
+      
+      
+      
+      
+      
+      
+    
+     <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+          <div class="col-sm-12 col-lg-12 mb-12"><img src="img/extras.png" class="TituloPatillo" >
+        </div>    
+  <div class="row" data-masonry='{"percentPosition": true }' style="margin-top: 30px">
+ 
+     
+  <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 cebollabox">
+        <figure class="p-3 mb-0">
+          <h1 class="card-title">CEBOLLA ASADA</h1>
+             <div class="precioback"> $19 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+        <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 cebollabox">
+        <figure class="p-3 mb-0">
+          <h1 class="card-title">EXTRA AGUACATE</h1>
+             <div class="precioback"> $19 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+        <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 cebollabox">
+        <figure class="p-3 mb-0">
+          <h1 class="card-title">EXTRA QUESO</h1>
+             <div class="precioback"> $23 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+       
+      
+      
+       </div>
+ </div>
+  </div>
+    
+      
+      
+      
+      
+      
+      
+      
+     <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+          <div class="col-sm-12 col-lg-12 mb-12"><img src="img/bebidas.png" class="TituloPatillo">
+        </div>    
+  <div class="row" data-masonry='{"percentPosition": true }' style="margin-top: 30px">
+ 
+     
+  <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3">
+        <figure class="p-3 mb-0 bebidabox">
+          <h1 class="card-title">AGUA DE SABOR</h1>
+             <div class="precioback"> $25 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+        <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3">
+        <figure class="p-3 mb-0 bebidabox">
+          <h1 class="card-title">AGUA NATURAL</h1>
+             <div class="precioback"> $25 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+        <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3">
+        <figure class="p-3 mb-0 bebidabox">
+          <h1 class="card-title">REFRESCO</h1>
+             <div class="precioback"> $25 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+              <!--------------------- PLATILLO BOX -------------------------------------------->   
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <div class="card p-3 amarillo">
+        <figure class="p-3 mb-0 bebidabox ">
+          <h1 class="card-title">CERVEZA</h1>
+             <div class="precioback"> $35 mxn</div>
+        </figure>
+      </div>
+    </div>
+    <!-------------------------------------------------------------------------------> 
+      
+     
+    </div>
+ </div>
+  </div>
+    
+    
+
+    
+    
+    
+    
+
+</main>
+
+<footer class="text-body-secondary py-5" id="mapa">
+   <div class="col-sm-12 col-lg-12 mb-12"><img src="img/footer.gif" class="TituloPatillo"></div>
+    
+
+      
+      
+      
+      <div class="col-sm-12 col-lg-12 mb-4">   
+          
+     
+          
+          <div class="col text-center">
+                <a href="https://goo.gl/maps/jvqY4PQBMwYo95aR8" target="_blank">
+          
+  <label class="btn btn-secondary" style="background: green; width: 100%; border-radius: 0; margin-top: 5px; margin-bottom: 5px">
+Ver en Google Maps
+  </label>
+                    </a>
+
+          </div>
+          
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.759107439291!2d-100.216105648822!3d25.71239868357898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662ea5d24747ffd%3A0x29157a08dd8a96ee!2sLAS%20GOYAS!5e0!3m2!1ses-419!2smx!4v1680565102712!5m2!1ses-419!2smx" width="620" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+      
+      
+      
+      
+
+<script async src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    </footer>
+
+      
+  </body>
+</html>
